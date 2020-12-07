@@ -22,4 +22,5 @@ app.use((req, resp, next) => {
   resp.send('<h1>I hate covid</h1>');
 });
 
-app.listen(3000);
+const port = process.env.port || 3000;
+app.listen(port, () => console.log(`Server started on port ${port}`));
